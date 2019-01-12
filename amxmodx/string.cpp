@@ -138,7 +138,7 @@ int set_amxstring_utf8(AMX *amx, cell amx_addr, const T *source, size_t sourcele
 }
 
 int set_amxstring_utf8_char(AMX *amx, cell amx_addr, const char *source, size_t sourcelen, size_t maxlen)
-{
+
 	return set_amxstring_utf8(amx, amx_addr, source, sourcelen, maxlen);
 }
 
@@ -172,7 +172,7 @@ extern "C" size_t get_amxstring_r(AMX *amx, cell amx_addr, char *destination, in
 
 char *get_amxbuffer(int id)
 {
-	static char buffer[4][MAX_BUFFER_LENGTH];
+	static char buffer[8][MAX_BUFFER_LENGTH];
 	return buffer[id];
 }
 
